@@ -1,5 +1,5 @@
-function myFunction() {
-    var sentence = "First part of sentence, ";
-    sentence += "second part of sentence.";
-    document.getElementById("concantenate").innerHTML = sentence;
+function myFirstFuntion() {
+    var str = "This text is pink!";
+    var result = str.fontcolor("pink");
+    document.getElementById("concantenate").innerHTML = result;
 }
