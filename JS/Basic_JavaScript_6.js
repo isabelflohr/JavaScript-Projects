@@ -9,8 +9,8 @@ function subtract_One() {
     document.getElementById("Nested_Functon").innerHTML = Count();
     function Count() {
         var Subtract_From = 100;
-        function Plus_five() {Subtract_From += 5;}
-        Plus_five();
+        function Minus_five() {Subtract_From -= 5;}
+    Minus_five();
         return Subtract_From;
     }
 }
