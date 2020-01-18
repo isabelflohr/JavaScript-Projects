@@ -6,7 +6,7 @@ function Ride_Function() {
 }
 
 function subtract_One() {
-    document.getElementById("Nested_Functon").innerHTML = Count();
+    document.getElementById("Nested_Function").innerHTML = Count();
     function Count() {
         var Subtract_From = 100;
         function Minus_five() {Subtract_From -= 5;}
