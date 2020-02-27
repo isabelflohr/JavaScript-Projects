@@ -1,7 +1,7 @@
 // This function will fire when the DOM is loaded.
 window.onload = function() {watch()};
 function watch() {
-    var btn = document.getElementById("btnstop");
+    var btn = document.getElementById("btnStop");
     btnDisabled(btn); // Disable the stop button b/c the game hasnt started yet.
 }
 
@@ -97,7 +97,7 @@ function stopGame() {
     // Reset all squares to their starting empty state.
     var arrayO = document.getElementsByClassName("O");
     var arrayX = document.getElementsByClassName("X");
-    for (var i=o; i<arrayO.length;i++) {
+    for (var i=0; i<arrayO.length;i++) {
         arrayO[i].style.transform = "translateY(-100%)";
     }
     for (var i=0; i<arrayX.length;i++) {
