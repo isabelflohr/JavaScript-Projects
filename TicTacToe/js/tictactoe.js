@@ -66,19 +66,19 @@ function startGame() {
 
 // These functions style the game buttons while theyre disabled
 function btnDisabled(btn) {
-    btn.style.color = "#fff";
+    btn.style.color = "fff";
     btn.style.border = "2px solid rgb(153, 153, 102)";
     btn.style.backgroundColor = "rgb(214, 214, 194)";
     btn.disabled = true;
 }
 function stopEnabled(btn) {
-    btn.style.color = "#fff";
+    btn.style.color = "fff";
     btn.style.border = "2px solid rgb(204, 0, 0)";
     btn.style.backgroundColor = "rgb(255, 51, 51)";
     btn.disabled = false;
 }
 function startEnabled(btn) {
-    btn.style.color = "#fff";
+    btn.style.color = "fff";
     btn.style.border = "2px solid rgb(0, 153, 0)";
     btn.style.backgroundColor = "rgb(57, 230, 0)";
     btn.disabled = false;
@@ -114,12 +114,12 @@ function showGameMsg() {
 
 // This function will conceal the message console from view.
 function hideGameMsg() {
-    clearMag() // Clear the text from the message console.
+    clearMsg() // Clear the text from the message console.
     document.getElementById("gameMsgBox").style.display = "none"; // Hide the div.
 }
 
 // This function will write text to the game message console
-function writeMag(txt) {
+function writeMsg(txt) {
     showGameMsg();
     document.getElementById("gameMsg").innerHTML = txt;
 }
@@ -590,7 +590,7 @@ function square2Animate() {
 function square3Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") {
-        var square = "0";
+        var square = "2";
         var verdict = recordMoves(square);
         if (verdict == undefined) {
             var paintAvatar = determineAvatar(); 
@@ -612,7 +612,7 @@ function square3Animate() {
 function square4Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") {
-        var square = "0";
+        var square = "3";
         var verdict = recordMoves(square);
         if (verdict == undefined) {
             var paintAvatar = determineAvatar(); 
@@ -634,7 +634,7 @@ function square4Animate() {
 function square5Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") {
-        var square = "0";
+        var square = "4";
         var verdict = recordMoves(square);
         if (verdict == undefined) {
             var paintAvatar = determineAvatar(); 
@@ -656,7 +656,7 @@ function square5Animate() {
 function square6Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") {
-        var square = "0";
+        var square = "5";
         var verdict = recordMoves(square);
         if (verdict == undefined) {
             var paintAvatar = determineAvatar(); 
@@ -678,7 +678,7 @@ function square6Animate() {
 function square7Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") {
-        var square = "0";
+        var square = "6";
         var verdict = recordMoves(square);
         if (verdict == undefined) {
             var paintAvatar = determineAvatar(); 
@@ -700,7 +700,7 @@ function square7Animate() {
 function square8Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") {
-        var square = "0";
+        var square = "7";
         var verdict = recordMoves(square);
         if (verdict == undefined) {
             var paintAvatar = determineAvatar(); 
@@ -722,7 +722,7 @@ function square8Animate() {
 function square9Animate() {
     var activePlayer = document.getElementById("showPlayer").innerHTML;
     if (activePlayer != "Game Stopped") {
-        var square = "0";
+        var square = "8";
         var verdict = recordMoves(square);
         if (verdict == undefined) {
             var paintAvatar = determineAvatar(); 
