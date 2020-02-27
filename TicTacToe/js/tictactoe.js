@@ -409,18 +409,18 @@ function checkWinCon3(info,squareArray) {
     var winCon3 = [6,7,8];
     var winDetected = "on";
     for (var i in info) {
-        if (info[i].charAt(0) == "3") {
+        if (info[i].charAt(0) == "6") {
             var match6Avatar = info[i].charAt(1);
         }
-        if (info[i].charAt(0) == "4") {
+        if (info[i].charAt(0) == "7") {
             var match7Avatar = info[i].charAt(1);
         }
-        if (info[i].charAt(0) == "5") {
+        if (info[i].charAt(0) == "8") {
             var match8Avatar = info[i].charAt(1);
         }
     }
     if (match6Avatar != undefined && match7Avatar != undefined && match8Avatar != undefined) {
-        if (match6Avatar == match7Avatar && match3Avatar == match8Avatar) {
+        if (match6Avatar == match7Avatar && match6Avatar == match8Avatar) {
             winDetected = "win";
         }
     }
@@ -470,7 +470,7 @@ function checkWinCon5(info,squareArray) {
             winDetected = "win";
         }
     }
-    winner(winDetected,winCon2);
+    winner(winDetected,winCon5);
 }
 
 // Checking for winCon squares 258.
