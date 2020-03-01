@@ -147,22 +147,23 @@ function saveSettings() {
 function getAvatars() {
     var p1Avatar = document.getElementById("p1Display").innerHTML;
     var p2Avatar = document.getElementById("p2Display").innerHTML;
-    var avatarArray = [p1Avatar.p2Avatar];
+    var avatarArray = [p1Avatar,p2Avatar];
     return avatarArray;
 }
 
-// This function will return the active player's avatar
+// this function will return the active player's avatar
 function determineAvatar() {
-    var avatarArray = getAvatars();
-    var active = document.getElementById("showPlayer").innerHTML;
-    p1Avatar = avatarArray[0];
-    p2Avatar = avatarArray[1];
-    if (active == "Player 1") {
-        var paintAvatar = p1Avatar;
-    } else if (active == "Player2") {
-        var paintAvatar = p2Avatar;
-    }
-    return paintAvatar;
+	// determine the correct avatar to paint for the active player
+	var avatarArray = getAvatars(); // returns an array of both player's assigned avatars
+	var active = document.getElementById('showPlayer').innerHTML; // get active player
+	p1Avatar = avatarArray[0];
+	p2Avatar = avatarArray[1];
+	if (active == "Player 1") { // check which player is active and their corresponding avatar
+		var paintAvatar = p1Avatar;
+	} else if (active == "Player 2") {
+		var paintAvatar = p2Avatar;
+	}
+	return paintAvatar; // returned back the correct avatar
 }
 
 // This function changes active player over to the other player.
@@ -356,29 +357,28 @@ function blink() {
 
 // Checking for wincon squares 012
 function checkWinCon1(info,squareArray) {
-    var winDetected = "on";
-    var winCon1 = [0,1,2];
-    // iterate through the growing array during gametime searching for the existence of index 0, index 1 and index 2 and once they do appear in the array, record their avatars and compare all 3 for win cons.
-    for (var i in info) {
-        if (info[i].charAt(0) == "0") {
-            var match0Avatar = info[i].charAt(1);
-        }
-        if (info[i].charAt(0) == "1") {
-            var match1Avatar = info[i].charAt(1);
-        }
-        if (info[i].charAt(0) == "2") {
-            var match2Avatar = info[i].charAt(1);
-        }
-    }
-// This will trigger only if there is a match for index0, index1, and index2.
-if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
-    if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
-        winDetected = "win";
-        winner(winDetected,winCon1);
-        return;
-    }
-}
-winner(winDetected,winCon1); // winCon1 is the array of win combo.
+	var winDetected = "on";
+	var winCon1 = [0,1,2];
+	for (var i in info) {
+		if (info[i].charAt(0) == "0") {
+			var match0Avatar = info[i].charAt(1); // only interested in recording the avatar
+		}
+		if (info[i].charAt(0) == "1") {
+			var match1Avatar = info[i].charAt(1);
+		}
+		if (info[i].charAt(0) == "2") {
+			var match2Avatar = info[i].charAt(1);
+		}
+	}
+	// this will trigger (ONLY) if there was a match for index0, index1, and index2
+	if (match0Avatar != undefined && match1Avatar != undefined && match2Avatar != undefined) {
+		if (match0Avatar == match1Avatar && match0Avatar == match2Avatar) {
+			winDetected = "win"; // this flag will pass when a win has been detected
+			winner(winDetected,winCon1);
+			return;
+		}
+	}
+	winner(winDetected,winCon1); // winCon1 is the array of win combo
 }
 
 // Checking for winCon squares 345.
@@ -429,7 +429,7 @@ function checkWinCon3(info,squareArray) {
 
 // Checking for winCon squares 036.
 function checkWinCon4(info,squareArray) {
-    var winCon2 = [0,3,6];
+    var winCon4 = [0,3,6];
     var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "0") {
@@ -452,7 +452,7 @@ function checkWinCon4(info,squareArray) {
 
 // Checking for winCon squares 147.
 function checkWinCon5(info,squareArray) {
-    var winCon2 = [1,4,7];
+    var winCon5 = [1,4,7];
     var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "1") {
@@ -475,7 +475,7 @@ function checkWinCon5(info,squareArray) {
 
 // Checking for winCon squares 258.
 function checkWinCon6(info,squareArray) {
-    var winCon2 = [2,5,8];
+    var winCon6 = [2,5,8];
     var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "2") {
@@ -498,7 +498,7 @@ function checkWinCon6(info,squareArray) {
 
 // Checking for winCon squares 642.
 function checkWinCon7(info,squareArray) {
-    var winCon2 = [6,4,2];
+    var winCon7 = [6,4,2];
     var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "6") {
@@ -520,8 +520,8 @@ function checkWinCon7(info,squareArray) {
 }
 
 // Checking for winCon squares 048.
-function checkWinCon2(info,squareArray) {
-    var winCon2 = [3,4,5];
+function checkWinCon8(info,squareArray) {
+    var winCon8 = [0,4,8];
     var winDetected = "on";
     for (var i in info) {
         if (info[i].charAt(0) == "0") {
