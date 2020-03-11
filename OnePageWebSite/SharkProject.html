@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>All About Sharks</title>
+        <link rel="stylesheet" href="one_page_website.css">
+    </head>
+    <body class="body">
+            
+        <!-- HOME -->
+            <div id="home">
+                 <div>
+                    <span><b>All About Sharks</b></span>
+                </div>
+                <div>
+                    <span>This website will teach you all you need to know to love sharks, instead of fear them!</span>
+                </div>
+            </div>
+        <!-- END HOME-->
+
+        <!-- VIDEO CONTAINER 1 -->
+        <div>
+                <iframe src="https://www.youtube.com/embed/k7I4RCsK94U" width="600" height="300" frameborder="8" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"  alt="whale shark swimming"></iframe 
+        </div>
+    <!-- END VIDEO CONTAINER -->
+
+        <!-- NAV -->
+        <section>
+            <div>
+                <ul>
+                    <a href="#home" id="link"><li>HOME</li></a>
+                    <a href="gallery" id="link"><li>GALLERY</li></a>
+                    <a href="facts" id="link"><li>FACTS</li></a>
+                    <a href="#contact" id="link"><li>ASK US</li></a>
+                </ul>
+            </div>
+        </section>
+        <!-- END NAV -->
+
+        <!-- GALLERY -->
+        <div id="gallery">
+            <h1><u>Gallery</u></h1>
+        <div>
+
+        <!-- PHOTO CONTAINER 1 -->
+        <div class="row">
+        <div>
+            <div class="column">
+                <img src="./sharkimages/sharkpics/shark_1.png" alt="shark attack infographic" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                <div>
+                    <h3>Click to Enlarge</h3>
+                </div>
+            </div>
+        </div>
+        <!-- END PHOTO CONTAINER -->
+
+        <!-- PHOTO CONTAINER 2 -->
+        <div>
+            <div class="column">
+                <img src="./sharkimages/sharkpics/shark_2.jpg" alt="sharks swimming w/ fish" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                <div>
+                    <h3>Click to Enlarge</h3>
+                </div>
+            </div>
+        </div>
+        <!-- END PHOTO CONTAINER -->
+
+        <!-- PHOTO CONTAINER 3 -->
+        <div>
+            <div class="column">
+                <img src="./sharkimages/sharkpics/shark_3.jpg" alt="great white shark swimming w/ a diver" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                <div>
+                    <h3>Click to Enlarge</h3>
+                </div>
+            </div>
+        </div>
+        <!-- END PHOTO CONTAINER -->
+
+        <!-- PHOTO CONTAINER 4 -->
+        <div>
+            <div class="column">
+                <img src="./sharkimages/sharkpics/shark_4.jpg" alt="whale shark swimming w/ fish" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                <div>
+                    <h3>Click to Enlarge</h3>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- END PHOTO CONTAINER -->
+
+        <!-- THE MODAL/LIGHTBOX -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="sharkimages/sharkpics/shark_1.png" style="width: 100%;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="sharkimages/sharkpics/shark_2.jpg" style="width: 100%;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="sharkimages/sharkpics/shark_3.jpg" style="width: 100%;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="sharkimages/sharkpics/shark_4.jpg" style="width: 100%;">
+                </div>
+
+                <!-- NEXT/PREV CONTROLS -->
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095</a>
+
+                <!-- END NEXT/PREV CONTROLS -->
+
+                <!-- CAPTION TEXT -->
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- END CAPTION TEXT -->
+
+                <!-- THUMBNAIL IMAGE CONTROLS -->
+
+                <div class="column"
+                <img class="demo" src="sharkimages/sharkpics/shark_1.png" onclick="currentSlide(1)" alt="shark picture">
+                </div>
+
+                <div class="column"
+                <img class="demo" src="sharkimages/sharkpics/shark_2.jpg" onclick="currentSlide(2)" alt="shark pic">
+                </div>
+
+                <div class="column"
+                <img class="demo" src="sharkimages/sharkpics/shark_3.jpg" onclick="currentSlide(3)" alt="shark picture">
+                </div>
+
+                <div class="column"
+                <img class="demo" src="sharkimages/sharkpics/shark_4.jpg" onclick="currentSlide(4)" alt="shark picture">
+                </div>
+
+                <!-- END THUMBNAIL IMAGE CONTROLS -->
+            </div>
+        </div>
+        <!-- END THE MODAL/LIGHTBOX -->
+        
+        <!-- FACTS -->
+        <section>
+            <div>
+                <table>
+                    <tr>
+                        <th><u>Fun Facts</u></th>
+                        <th><u>About Sharks</u></th>
+                    </tr>
+                    <tr>
+                        <td>Until the 16th century they were known to seafarers are &quot;sea dogs&quot;</td>
+                        <td>Sharks can go into a trance. When you flip a shark upside down they go into a trance like state called tonic immobility</td>
+                    </tr>
+                    <tr>
+                        <td>Shark bite fatalities only occur about six times per year. That&#x27;s in comparison to the 100 million sharks that are killed by humans every year</td>
+                        <td>Each whale shark&#x27;s spot pattern is unique as a fingerprint</td>
+                    </tr>
+                    <tr>
+                        <td>Sharks generally avoid humans and only interact out of curiosity, in defense when we threaten them or invade their territory, or if they confuse humans for their normal prey</td>
+                        <td>Most of today&#x27;s sharks developed 64 million years ago, same time as dinosaurs</td>
+                    </tr>
+                    <tr>
+                        <td>Sharks are most active during dusk/dawn</td>
+                        <td>Baby sharks are called pups</td>
+                    </tr>
+                    <tr>
+                        <td>As predators, sharks are critically important to maintaining healthy marine ecosystems. Predators keep populations of prey species strong by feeding on the weak and the sick, and they keep prey populations in check</td>
+                        <td>Many sharks are important prey for other wildlife from marine mammals, seabirds, and other fish (including other sharks)</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </section>
+        <!-- END FACTS -->
+        
+        <!-- FOOTER -->
+        
+        <!-- CONTACT -->
+        <section>
+            <div id="contact">
+                <div>
+                    <h1><u>Ask the Professionals</u></h1>
+                        <div>
+                            <h2><span>Have questions?</span>
+                                <br/>Ask us here!
+                            </h2>
+                            <p>
+                                Ask your question, leave the email we can answer you at, and have all your shark questions answered soon!
+                            </p>
+                        </div>
+                            <form class="form" action="" method="post">
+                                <input class="contact" type="text" value="Your Question">
+                                <input class="contact" type="text" value="Email Address">
+                            <div>
+                                <input type="submit" value="Submit">
+                            </div>
+                            </form>
+                </div>
+            </div>        
+        </section>
+        <!-- END CONTACT -->
+
+        <!-- END FOOTER -->
+            </div>
+        </div>
+        <script src="JS/one_page_website.js"></script>
+    </body>       
+</html>
